@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Evenodd
+{
+public static void main(String args[])
+{
+int n,r;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a number: ");
+n=sc.nextInt();
+r=n%10;
+if (n % 2 == 0)
+{
+System.out.println("even number: "+n);
+}
+else
+{
+System.out.print("odd number: "+n);
+}
+n=n/10;
+}
+}
