@@ -1,21 +1,28 @@
-import java.util.Scanner;
-class Evenodd
+import java.util.*;
+class Eevenodd
 {
 public static void main(String args[])
 {
-int n,r;
 Scanner sc=new Scanner(System.in);
-System.out.println("Enter a number: ");
+int n;
+int r,even=0,odd=0;
+int even_count=1,odd_count=1;
 n=sc.nextInt();
-r=n%10;
-if (n % 2 == 0)
+while(n!=0)
 {
-System.out.println("even number: "+n);
+r=n%10;
+n=n/10;
+if(r%2 == 0)
+{
+even=r*even_count+even;
+even_count=even_count&10;
 }
 else
 {
-System.out.print("odd number: "+n);
+odd=r*odd_count+odd;
+odd_count=odd_count*10;
 }
-n=n/10;
+}
+System.out.println(even+" "+odd);
 }
 }
