@@ -1,0 +1,16 @@
+class Pattern3
+{
+public static void main(String args[])
+{
+char i,j,ch='A';
+for(i='A';i<='E';i++)
+{
+for(j='A';j<=i;j++)
+{
+System.out.print(ch+" ");
+ch++;
+}
+System.out.println("");
+}
+}
+}
