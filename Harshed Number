@@ -1,0 +1,25 @@
+import java.util.Scanner;
+class Harshed
+{
+public static void main(String args[])
+{
+int a,n,s=0,rem;
+Scanner sc=new Scanner(System.in);
+n=sc.nextInt();
+a=n;
+while(n>0)
+{
+rem=n%10;
+s += rem;
+n /= 10;
+}
+if(a%s ==0)
+{
+System.out.println("harshed number: "+a);
+}
+else
+{
+System.out.println("is not a harshed number: "+a);
+}
+}
+}
