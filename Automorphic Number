@@ -1,0 +1,23 @@
+import java.util.*;
+class Automorphic
+{
+public static void main(String args[])
+{
+int n,a,m,rem,k=0;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter a number: ");
+n=sc.nextInt();
+a=n*n;
+m=n;
+while(n != 0)
+{
+rem=n%10;
+k++;
+n=n/10;
+}
+if((a % (Math.pow(10,k))) == m)
+System.out.println("Automorphic number.");
+else
+System.out.println("Not an automorphic number.");
+}
+}
