@@ -1,0 +1,12 @@
+// https://practice.geeksforgeeks.org/problems/product-of-maximum-in-first-array-and-minimum-in-second3943/1/?category[]=Arrays&category[]=Arrays&page=1&query=category[]Arrayspage1category[]Arrays
+
+class Solution
+{
+    public static long find_multiplication (int arr[], int brr[], int n, int m)
+    {
+        Arrays.sort(arr);
+        Arrays.sort(brr);
+        int p=arr[arr.length-1]*brr[0];
+        return p;
+    }
+}
