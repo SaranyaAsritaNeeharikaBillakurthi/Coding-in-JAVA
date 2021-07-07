@@ -1,0 +1,10 @@
+// https://practice.geeksforgeeks.org/problems/find-minimum-and-maximum-element-in-an-array4428/1/?category[]=Arrays&category[]=Arrays&page=1&query=category[]Arrayspage1category[]Arrays
+
+class Compute 
+{
+    static pair getMinMax(long a[], long n)
+    {
+        Arrays.sort(a);
+        return new pair(a[0],a[(int)(n-1)]);
+    }
+}
