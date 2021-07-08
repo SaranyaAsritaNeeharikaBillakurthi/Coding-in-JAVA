@@ -1,0 +1,26 @@
+import java.util.Scanner;
+class Arrayright
+{    
+public static void main(String args[])
+{
+Scanner sc= new Scanner(System.in);
+int i;    
+int n = sc.nextInt();
+int r = sc.nextInt();
+int arr[] = new int[n];
+int brr[] = new int[n];
+for(i=0;i<n;i++)                  
+arr[i]=sc.nextInt();
+for(i=0;i<n;i++)
+{
+if(r-i<0)
+{
+brr[n+r-i]=arr[i];
+}
+else
+brr[r-i]=arr[i];
+}
+for(i=0;i<n;i++)
+System.out.print(brr[i]+"    ");
+}
+}
