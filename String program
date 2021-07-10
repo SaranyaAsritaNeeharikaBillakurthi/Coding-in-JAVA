@@ -1,0 +1,34 @@
+/* count the number of sumbols,letters.digits and if they are equal print "yes" otherwise "no" */
+
+import java.util.*;
+class Strprogram
+{
+public static void main(String args[])
+{
+String str;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter String:");
+str=sc.next();
+int u=0,l=0,d=0,s=0;
+char ch[]=str.toCharArray();
+for(int i=0;i<ch.length;i++)
+{
+if(Character.isUpperCase(ch[i]))
+u++;
+else if(Character.isLowerCase(ch[i]))
+l++;
+else if(Character.isDigit(ch[i]))
+d++;
+else
+s++;
+}
+System.out.println("Total number of upper case letters: "+u);
+System.out.println("Total number of lower case letters: "+l);
+System.out.println("Total number of digits: "+d);
+System.out.println("Total number of symbols: "+s);
+if(u==l && d==s)
+System.out.println("YES");
+else
+System.out.println("NO");
+}
+}
