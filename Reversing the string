@@ -1,0 +1,22 @@
+/*
+Input: i.like.this.program.very.much
+Output: much.very.program.this.like.i
+*/
+
+import java.util.Scanner;
+public class Stringreverse
+{
+public static void main(String args[])
+{ 
+String str,rev="";
+Scanner sc=new Scanner(System.in);
+System.out.println("enter a string: ");
+str=sc.nextLine();
+String ch[]=str.split("[.]");
+for(int i=ch.length-1;i>=0;i--)
+{
+String s=ch[i];
+System.out.print(s+".");
+}
+}
+}
