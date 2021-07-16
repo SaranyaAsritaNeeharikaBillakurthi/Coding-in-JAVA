@@ -1,0 +1,26 @@
+/* https://leetcode.com/problems/sort-array-by-parity-ii/submissions/ */
+
+class Solution {
+    public int[] sortArrayByParityII(int[] nums) {
+        int evencount=0;
+        int oddcount=1;
+        int count=0;
+        int op[]=new int[nums.length];
+        
+        while(count<nums.length)
+        {
+            if(nums[count]%2==0)
+            {
+                op[evencount]=nums[count];
+                evencount+=2;
+            }
+            else
+            {
+                op[oddcount]=nums[count];
+                oddcount+=2;
+            }
+            count++;
+        }
+        return op;
+    }
+}
