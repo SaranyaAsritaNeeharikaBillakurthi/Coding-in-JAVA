@@ -1,0 +1,39 @@
+import java.util.*;
+class Frame5
+{
+public static void main(String args[])
+{
+int n,x;
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter array size: ");
+n=sc.nextInt();
+LinkedList<Integer>Ll=new LinkedList<Integer>();
+System.out.println("Enter arraylist elements: ");
+for(int i=0;i<n;i++)
+Ll.add(sc.nextInt());
+System.out.println("Enter element to search: ");
+x=sc.nextInt();
+if(Ll.contains(x))
+{
+int m=Ll.indexOf(x);
+Ll.remove(m);
+System.out.print("Elements after deletion: "+Ll);
+}
+else 
+System.out.print("Element not Found");
+}
+}
+
+/*
+output  :  Enter array size:
+           5
+           Enter arraylist elements:
+           98
+           66
+           77
+           37
+           15
+           Enter element to search:
+           15
+           Elements after deletion: [98, 66, 77, 37]
+ */
