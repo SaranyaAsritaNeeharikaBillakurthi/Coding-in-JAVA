@@ -1,0 +1,33 @@
+import java.util.*;
+class Hashmap
+{
+public static void main(String[] args)
+{
+int n,m;
+String s;
+HashMap<Integer,String> x=new HashMap<Integer,String>();
+Scanner sc = new Scanner(System.in);
+System.out.println("Enter number of values: ");
+m = sc.nextInt();
+System.out.println("Enter key and values: ");
+for(int i=0;i<m;i++)
+{
+n = sc.nextInt();
+s = sc.next();
+x.put(n,s);
+}
+TreeMap<Integer,String> t=new TreeMap<Integer,String>(x);
+System.out.println("After sorting: "+t);
+}
+}
+
+
+/* Example:
+            Input: 5 John
+                   1 Sam
+                   7 kim
+            Output:
+                   1 Sam
+                   5 John
+                   7 kim
+*/
