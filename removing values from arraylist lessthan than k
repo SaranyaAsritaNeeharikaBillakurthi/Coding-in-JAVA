@@ -1,0 +1,34 @@
+
+import java.util.*;
+class Arraylist
+{
+public static void main(String[] args) 
+{
+Scanner sc=new Scanner(System.in);
+System.out.println("Enter n value: "); 
+int n=sc.nextInt();
+System.out.println("Enter values into arraylist: ");
+ArrayList<Integer> x=new ArrayList<Integer>();
+for(int i=0;i<n;i++)
+x.add(sc.nextInt());
+System.out.println("Enter k value: ");
+int k=sc.nextInt();
+Iterator<Integer> m=x.iterator();
+while(m.hasNext())
+{
+if(m.next()<=k)
+m.remove();
+}
+for(Integer i:x)
+System.out.print(i+" "); 
+}
+}
+
+/*
+Input:
+      Enter n value: 7
+      Enter values into arraylist: 30 40 15 20 25 7 99
+      Enter k value: 20
+Output:
+      30 40 25 99
+*/
