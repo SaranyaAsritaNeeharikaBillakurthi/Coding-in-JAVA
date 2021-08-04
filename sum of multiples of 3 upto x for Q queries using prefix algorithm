@@ -1,0 +1,36 @@
+import java.util.*;
+class Prefixarray
+{
+public static void main(String args[])
+{
+Scanner sc=new Scanner(System.in);
+int n=1000;
+int a[]={1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
+System.out.println("Enter number of Queries: ");
+int m=sc.nextInt();
+int prefix[]=new int[a.length+1];
+prefix[0]=0;
+prefix[1]=a[2];
+while(m>0)
+{
+for(int i=2;i<a.length+1;i++)
+{
+prefix[i]=prefix[i-1]+a[i-1]*3;
+}
+System.out.println("Enter multiples: ");
+int s=sc.nextInt();
+System.out.println(prefix[s]);
+m--;
+}
+}
+}
+
+/* Input :
+          3 // Queries
+          2 //input
+          9
+          1 // input
+          3
+          3 // input
+          18  
+*/
